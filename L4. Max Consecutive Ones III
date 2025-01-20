@@ -15,6 +15,7 @@ public:
                 if(nums[l]==0){
                     zero--;
                 }
+                else one--;
                 l++;
 
             }
