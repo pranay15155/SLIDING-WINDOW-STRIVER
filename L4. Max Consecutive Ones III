@@ -6,16 +6,13 @@ public:
         int n=nums.size();
         int l=0,r=0;
         int ans=0;//maximum length
-        int one=0,zero=0;
+        int zero=0;
         while(r<n){
-            if(nums[r]==0)zero++;
-            else one++;
- 
+            if(nums[r]==0)zero++; 
             while(zero>k){
                 if(nums[l]==0){
                     zero--;
                 }
-                else one--;
                 l++;
 
             }
