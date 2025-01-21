@@ -54,3 +54,31 @@ public:
 //abc
 
 //substrings starting at index 5 and 6--> not possible
+
+
+
+
+//METHOD-2
+
+very interesting approach can watch striver video to understand how it is working 
+class Solution {
+public:
+    int numberOfSubstrings(string s) {
+        int a=-1,b=-1,c=-1;
+        int l=0,r=0;
+        int n=s.size();
+        int ans=0;
+        while(r<n){
+            if(s[r]=='a')a=r;
+            if(s[r]=='b')b=r;
+            if(s[r]=='c')c=r;
+           
+            if(a>-1 && b>-1 && c>-1){
+                ans+=min({a,b,c})+1;
+            }
+            r++;
+        }
+        return ans;
+    }
+};
+//bbacba
